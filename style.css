@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./pic2.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  width: 500px;
+  height: auto;
+  min-height: 400px;
+  padding: 30px;
+  background: rgba(0, 0, 51, 0.7); /* Deep blue background with increased transparency */
+  border: 2px solid #b3c7e6; /* Soft white-blue border */
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+}
+
+h1 {
+  color: #ffffff; /* White text color */
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.todo-input {
+  flex: 1;
+  outline: none;
+  padding: 10px 10px 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2); 
+  border: 2px solid #b3c7e6; 
+  border-radius: 30px;
+  color: #ffffff; 
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.todo-input::placeholder {
+  color: #bfbfbf; /* Light gray placeholder text */
+}
+
+.add-button {
+  border: none;
+  outline: none;
+  background: #b3c7e6; /* Soft white-blue background */
+  color: #000033; /* Deep blue text color */
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.empty-image {
+  margin: 55px auto 0;
+  display: block;
+}
+
+.todo {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(51, 51, 77, 0.8); /* Deep blue-purple background with transparency */
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 2px solid #b3c7e6; /* Soft white-blue border */
+  transition: all 0.2s ease;
+}
+
+.todo:first-child {
+  margin-top: 0;
+}
+
+.todo:last-child {
+  margin-bottom: 0;
+}
+
+.todo:hover {
+  background-color: rgba(179, 199, 230, 0.3); /* Softer background on hover */
+}
+
+.todo label {
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff; /* White text color */
+}
+
+.todo span {
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+span::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  margin-left: -30px;
+  border-radius: 100px;
+  border: 2px solid #b3c7e6; /* Soft white-blue border */
+}
+
+input[type='checkbox'] {
+  visibility: hidden;
+}
+
+input:checked + span {
+  text-decoration: line-through;
+  color: #b3c7e6; /* Soft white-blue color */
+}
+
+.todo:hover input:checked + span::before, input:checked + span::before {
+  background: url(./check.svg) 50% 50% no-repeat #09bb21;
+  border-color: #09bb21; /* Green checkmark */
+}
+
+.todo:hover span::before {
+  border-color: #ffffff; /* White border on hover */
+}
+
+.todo .edit-btn, .todo .delete-btn, .todo .priority-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff; /* White icon color */
+  font-size: 20px;
+  margin-left: 5px; /* Adjusted margin for spacing */
+}
+
+.todo .priority-btn {
+  color: #ffcc00; /* Bright yellow star color for priority */
+}
+
+.todos-container {
+  height: 300px;
+  overflow: overlay;
+}
+
+.todos-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3); /* Light white background with transparency */
+  border-radius: 20px;
+}
+
+.todos-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.todos-container:hover::-webkit-scrollbar {
+  width: 7px;
+}
+
+.todos-container::-webkit-scrollbar-thumb {
+  background: #b3c7e6; /* Soft white-blue scrollbar thumb */
+  border-radius: 20px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.filter {
+  color: #ffffff; /* White text color */
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #b3c7e6; /* Soft white-blue border */
+  transition: all 0.2s ease;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.filter.active, .filter:hover {
+  background-color: #b3c7e6; /* Soft white-blue background on active/hover */
+}
+
+.delete-all {
+  display: flex;
+  color: #ffffff; /* White text color */
+  padding: 7px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-all:hover {
+  border-radius: 5px;
+  background-color: #b3c7e6; /* Soft white-blue background on hover */
+}
