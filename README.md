@@ -38,6 +38,8 @@ Searching Tasks
 
 Enter a keyword in the search input field.
 Tasks matching the keyword will be displayed.
+
+
 ![images 1](https://github.com/hksahanagithub/Web-Dev-Task3/assets/164031728/9e90f8df-1284-4770-903a-e3f8872fc6a7)
 
 # Fig 1. TODO App.
